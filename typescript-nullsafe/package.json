@@ -1,7 +1,7 @@
 {
-  "name": "typescript-blocking-queue",
-  "version": "1.2.3",
-  "description": "Blocking queue functions",
+  "name": "typescript-nullsafe",
+  "version": "1.0.1",
+  "description": "Nullable functions",
   "scripts": {
     "test": "jest",
     "build": "npm run validate && npm run build:esm && npm run build:cjs",
@@ -16,18 +16,20 @@
   "author": "Dust in Est",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dustinest/typescript_blocking_queue.git"
+    "url": "git+https://github.com/dustinest/typescript-async-utils.git"
   },
   "keywords": [
-    "queue",
-    "blocking",
-    "TypeScript"
+    "optional",
+    "maybe",
+    "Nullable",
+    "TypeScript",
+    "nullsafe"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dustinest/typescript_blocking_queue/issues"
+    "url": "https://github.com/dustinest/typescript-async-utils/issues"
   },
-  "homepage": "https://github.com/dustinest/typescript_blocking_queue/BlockingQueue",
+  "homepage": "https://github.com/dustinest/typescript-async-utils/tree/main/typescript-nullsafe#readme",
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "jest": "^28.0.3",
