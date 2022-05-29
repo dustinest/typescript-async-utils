@@ -1,11 +1,11 @@
 # Install
 
 ```
-$ npm install react-useasync-hook --save
+$ npm install react-useasync-hooks --save
 ```
 or
 ```
-$ yarn add react-useasync-hook
+$ yarn add react-useasync-hooks
 ```
 [Direct link to npmjs.com](https://www.npmjs.com/package/react-useasync-hook)
 
