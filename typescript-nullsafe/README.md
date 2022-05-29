@@ -8,6 +8,8 @@ or
 $ yarn add typescript-nullsafe
 ```
 
+[Direct link to npmjs.com](https://www.npmjs.com/package/typescript-nullsafe)
+
 # The problem
 
 In JavaScript `undefined` and `null`values are hard to check. When using `!variable`check then

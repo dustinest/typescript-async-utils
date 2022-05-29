@@ -7,7 +7,7 @@ or
 ```
 $ yarn add react-useasync-hooks
 ```
-[Direct link to npmjs.com](https://www.npmjs.com/package/react-useasync-hook)
+[Direct link to npmjs.com](https://www.npmjs.com/package/react-useasync-hooks)
 
 # The problem
 
