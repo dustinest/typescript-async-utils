@@ -63,13 +63,13 @@ Or if we want to have init status
 ```typescript
 const [status, callback] = useAsync<MyType>(async (prop1: string, prop2: boolean) => {
   /** call some asynchronous code which returs MyType **/
-  }, {useInit: true} // by default it is set to false
+  }, {useInit: true} // optional parameter, by default it is set to false
 , [some_depenencies])
 ```
 First argument is funciton and second one, which is not required is configuration, if we would like to see init status. The reason for not seeing init status is in most cases we load stuff and do not care if it is in init state.
 
 The status is either:
-- init (`status.type === AsyncStatus.INIT`) // only in case useInit is set to trie (by default, when props are not set it is set to false)
+- init (`status.type === AsyncStatus.INIT`) // only in case useInit is set to true (by default, when props are not set it is set to false) fails back to `AsyncStatus.WORKING` when `useInit` is set to false 
 - init (`status.type === AsyncStatus.WORKING`) // when the callback is working
 - init (`status.type === AsyncStatus.SUCCESS`) // when callback has finished working
 - init (`status.type === AsyncStatus.ERROR`) // when some error happened
