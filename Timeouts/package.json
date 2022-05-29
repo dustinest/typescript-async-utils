@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/dustinest/typescript-async-utils/issues"
   },
-  "homepage": "https://github.com/dustinest/typescript-async-utils#readme",
+  "homepage": "https://github.com/dustinest/typescript-async-utils/Timeouts",
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "jest": "^28.0.3",
