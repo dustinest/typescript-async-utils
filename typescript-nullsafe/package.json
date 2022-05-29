@@ -1,6 +1,6 @@
 {
   "name": "typescript-nullsafe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nullable functions",
   "scripts": {
     "test": "jest",
