@@ -4,3 +4,4 @@ Check:
 - [typescript-async-timeouts](typescript-async-timeouts/README.md)
 - [typescript-blocking-queue](typescript-blocking-queue/README.md)
 - [typescript-nullsafe](typescript-nullsafe/README.md)
+- [react-use-value-change](react-use-value-change/README.md)
