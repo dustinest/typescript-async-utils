@@ -105,7 +105,9 @@ export const useTimeoutAsync = <
                 dispatch({status: AsyncStatus.WORKING} as AsyncStatusPending);
                 storedCallback.current(...args).then(result).catch(reject)
               } else {
-                reject(new Error("Callback cancelled"));
+                // dispatch({status: AsyncStatus.CANCELLED});
+                result(undefined as any as ValueType);
+                // reject(new Error("Callback cancelled"));
               }
             }, props.current.milliseconds);
             dispatch({status: TimeoutAsyncStatus.SCHEDULED} as AsyncStatusPending);
@@ -113,7 +115,8 @@ export const useTimeoutAsync = <
           const value = await current;
           if (currentTimeout && cancelledTimeouts.has(currentTimeout)) {
             clearTimeout(currentTimeout);
-            dispatch({status: AsyncStatus.ERROR, error: new Error("Callback cancelled")} as AsyncActionError<ErrorType>);
+            dispatch({status: AsyncStatus.CANCELLED});
+            // dispatch({status: AsyncStatus.ERROR, error: new Error("Callback cancelled")} as AsyncActionError<ErrorType>);
           } else if (!cancelled.has(current)) {
             dispatch({status: AsyncStatus.SUCCESS, value});
           }

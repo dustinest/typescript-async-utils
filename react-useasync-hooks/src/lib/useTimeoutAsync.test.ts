@@ -66,6 +66,7 @@ describe('useAsync()', () => {
         {milliseconds})
     );
 
+    // @ts-ignore
     let cancelled
     act(() => { cancelled = result.current[1]() });
     const [status, cancel] = resolveLoading(result.current[0]);
@@ -73,7 +74,10 @@ describe('useAsync()', () => {
     act(() => { cancel(); });
     act(() => { jest.advanceTimersByTime(timeout) })
     expect(result.current[0]).toStrictEqual({ status :AsyncStatus.CANCELLED } as AsyncResulCancelled<boolean>);
-    await cancelled
+    await act(async () => {
+      // @ts-ignore
+      await cancelled
+    });
     expect(result.current[0]).toStrictEqual({ status :AsyncStatus.CANCELLED } as AsyncResulCancelled<boolean>);
   })
 
